@@ -10,43 +10,43 @@
     <link rel="icon" href="favicon.webp" type="image/x-icon"> 
 </head>
 <body class="bg-opacity-10 bg-cover" style="background-image: url('bgimg.jpg');">
-
-    <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 flex flex-col items-center justify-center bg- rounded-lg shadow-lg">
-        <h1 class="text-3xl font-bold text-center mb-4">Currency Converter</h1>
+    <div class="md:flex justify-center items-center min-h-screen">
+    <div class="container border-2 border-gray-500 mx-auto p-4 pt-6 md:p-6 lg:p-12 flex flex-col items-center justify-center bg-cyan-500 bg-opacity-65  shadow-lg w-fit mt-0">
+        <h1 class="text-4xl font-bold text-center mb-4">Currency Converter</h1>
+        <br>
         <form class="w-full max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="fromCurrency">
-                        From
-                    </label>
-                    <select id="fromCurrency" class="select-option block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white">
-                    </select>
-                </div>
-                <div class="w-full md:w-1/2 px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="toCurrency">
-                        To
-                    </label>
-                    <select id="toCurrency" class="select-option block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white">
-                    </select>
-                </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="amount">
-                        Amount
-                    </label>
-                    <input type="float" id="amount" class="appearance-none block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white" value="1">
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <!-- Changed button background color to grey and font color to black -->
-                <button id="convertBtn" class="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded" type="button">Convert</button>
-            </div>
-            <br>
-            <br>    
-            <div id="result" class="text-2xl font-bold mb-4 text-center"></div>
-        </form>
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide font-bold mb-2 rounded-lg" for="fromCurrency">
+                From
+            </label>
+            <select id="fromCurrency" class="select-option block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white rounded-lg">
+            </select>
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide font-bold mb-2 rounded-lg" for="toCurrency">
+                To
+            </label>
+            <select id="toCurrency" class="select-option block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white rounded-lg">
+            </select>
+        </div>
     </div>
-
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+            <label class="block uppercase tracking-wide font-bold mb-2 rounded" for="amount">
+                Amount
+            </label>
+            <input type="float" id="amount" class=" rounded block w-full bg-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white rounded-lg" value="1">
+        </div>
+    </div>
+    <div class="flex justify-center rounded">
+        <button id="convertBtn" class="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-lg" type="button">Convert</button>
+    </div>
+    <br>
+    <br>    
+    <div id="result" class="text-2xl font-bold mb-4 text-center"></div>
+</form>
+</div>
+</div>
 </body>
 </html>

@@ -680,7 +680,24 @@ function populateCurrencies() {
       }
   ];
 
-  
+  const amountInput = document.getElementById('amount');
+
+    amountInput.addEventListener('input', function () {
+        
+        // Limit decimal places to two
+        const parts = this.value.split('.');
+        if (parts.length > 1) {
+            parts[1] = parts[1].slice(0, 2);
+            this.value = parts.join('.');
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && document.activeElement === amountInput) {
+            e.preventDefault()
+            document.getElementById('convertBtn').click();  
+        }
+    });
   var fromCurrencyDropdown = document.getElementById('fromCurrency');
   var toCurrencyDropdown = document.getElementById('toCurrency');
 
@@ -695,12 +712,15 @@ function populateCurrencies() {
       option2.innerText = `${currency.flag} ${currency.code} - ${currency.name}`;
       toCurrencyDropdown.appendChild(option2);
   });
+  
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   populateCurrencies();
+  
 
   document.getElementById('convertBtn').addEventListener('click', function () {
+
       var fromCurrency = document.getElementById('fromCurrency').value;
       var toCurrency = document.getElementById('toCurrency').value;
       var amount = document.getElementById('amount').value;
@@ -718,3 +738,4 @@ document.addEventListener('DOMContentLoaded', function () {
           });
   });
 });
+
